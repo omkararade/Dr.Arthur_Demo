@@ -145,7 +145,7 @@ st.title("📈 Stock Analysis Tool")
 #         st.error(f"Output file not found at: {file_path}")
 
 # Option 2: In-app analysis
-st.header("Option 2: Analyze in App")
+st.header("Analyze in App")
 uploaded_file = st.file_uploader("Upload Excel file with tickers", type=["xlsx", "xls"])
 
 if uploaded_file:
