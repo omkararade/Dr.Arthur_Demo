@@ -64,6 +64,49 @@ def get_200d_50d_crossover(ticker):
         return 'No Cross'
     except Exception as e:
         return None
+    
+with st.sidebar:
+    st.header("📋 Instructions")
+    
+    st.subheader("File Upload Requirements")
+    st.markdown("""
+    1. **File Format**: Excel (.xlsx or .xls)
+    2. **Required Column**: 
+       - Must have a column named **'Ticker'** (case-sensitive)
+    3. **Example Structure**:
+    """)
+    
+    # Example dataframe
+    example_df = pd.DataFrame({
+        'Ticker': ['AAPL', 'MSFT', 'GOOGL'],
+        'Company Name': ['Apple Inc.', 'Microsoft', 'Alphabet Inc.'],
+        'Notes': ['Tech', 'Software', 'Parent of Google']
+    })
+    st.dataframe(example_df)
+    
+    st.markdown("""
+    4. **How to Upload**:
+       - Click "Browse files" or drag-and-drop your file
+       - Ensure only one sheet contains your ticker data
+       - Wait for the confirmation message
+    """)
+    
+    st.subheader("Analysis Options")
+    st.markdown("""
+      
+    - Quick In-App Analysis
+      - Faster results directly in the app
+      - Limited to key metrics
+      - Best for quick checks
+    """)
+    
+    st.subheader("Need Help?")
+    st.markdown("""
+    - Ensure your Excel file isn't open while uploading
+    - Tickers must be valid stock symbols
+    - For large files (>50 tickers), use Option 1
+    - Contact omkararade@gmail.com for assistance
+    """)
 
 # Streamlit UI
 st.title("📈 Stock Analysis Tool")
