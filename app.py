@@ -105,7 +105,7 @@ with st.sidebar:
     - Ensure your Excel file isn't open while uploading
     - Tickers must be valid stock symbols
     - For large files (>50 tickers), use Option 1
-    - Contact omkararade@gmail.com for assistance
+
     """)
 
 # Streamlit UI
